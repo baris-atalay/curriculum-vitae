@@ -1,0 +1,14 @@
+{
+  "plugins": ["react", "react-hooks"],
+  "extends": [
+    "airbnb",
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
+}
