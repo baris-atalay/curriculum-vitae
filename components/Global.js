@@ -1,6 +1,14 @@
+import Head from 'next/head';
+
 function Global({ children }) {
   return (
     <>
+      <Head>
+        <link
+          href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap&subset=latin-ext"
+          rel="stylesheet"
+        />
+      </Head>
       <div>{children}</div>
       <style global jsx>{`
         *,
@@ -24,6 +32,7 @@ function Global({ children }) {
           -ms-text-size-adjust: 100%;
           -webkit-text-size-adjust: 100%;
           word-break: break-word;
+          font-family: 'Open Sans', sans-serif;
         }
 
         body {

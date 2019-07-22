@@ -1,35 +1,37 @@
 import Global from 'components/Global';
+import Portrait from 'pages/components/home/Portrait';
+import Profile from 'pages/components/home/Profile';
 
 function HelloWorld() {
   return (
     <Global>
       <div>
-        Hello world
-        <p>scoped!</p>
-        <style jsx>
-          {`
-            p {
-              color: blue;
-            }
-            div {
-              display: flex;
-              background: red;
-            }
-            @media (max-width: 600px) {
-              div {
-                background: blue;
-              }
-            }
-          `}
-        </style>
-        <style global jsx>
-          {`
-            body {
-              background: black;
-            }
-          `}
-        </style>
+        <div>
+          <Portrait />
+          <Profile />
+        </div>
       </div>
+      <style jsx>
+        {`
+          div {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+          }
+          div > div {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            width: 100%;
+            max-width: 1024px;
+            padding: 0 20px;
+            margin: 80px 0;
+            height: 500px;
+            background-color: grey;
+          }
+        `}
+      </style>
     </Global>
   );
 }
